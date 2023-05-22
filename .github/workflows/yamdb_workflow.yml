@@ -20,9 +20,7 @@ jobs:
         pip install -r requirements.txt
   
     - name: Test with flake8 and django tests
-      run: |
-        echo ls 
-        python manage.py test
+      run: python manage.py test
     
     - name: Test with pytest
       run: pytest

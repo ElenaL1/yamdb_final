@@ -1,29 +1,29 @@
 # yamdb_final
-https://github.com/ElenaL1/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+![yamdb_final](https://github.com/ElenaL1/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
-yamdb_final
 Запуск проекта через Github Actions.
 Проект является продолжением проекта API для Yamdb https://github.com/ElenaL1/api_yamdb 
 Проект упаковывается docker compose. Автор проекта: Елена Ламберт
 
-Стек
+## Стек
 Python 3.9, Django, DRF, Simple-JWT, PostgreSQL, Ubuntu, Docker, nginx, gunicorn, Pandas, Github Actions
 
-Как запустить проект:
+## Как запустить проект:
 Запускается при обновление репозитория (команда git push).
 
 Проект доступен по адресу zali3.ddns.net
 
 
-Примеры запросов
+## Примеры запросов
 Пример POST-запроса на регистрацию нового пользователя: POST .../api/v1/auth/signup/
-
+```
 {
 "email": "user@example.com",
 "username": "string"
 }
+```
 Пример ответа на GET-запрос на получение списка всех произведений: GET .../api/v1/titles/
-
+```
 {
 "count": 0,
 "next": "string",
@@ -48,6 +48,6 @@ Python 3.9, Django, DRF, Simple-JWT, PostgreSQL, Ubuntu, Docker, nginx, gunicorn
 }
 ]
 }
+```
 Более подробно информацию об эндпоинтах и примерах запросов и ответов можно посмотреть в
-
-yamdb_final/api_yamdb/api_yamdb/static/redoc.yaml
+```yamdb_final/api_yamdb/api_yamdb/static/redoc.yaml```

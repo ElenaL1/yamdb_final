@@ -18,13 +18,11 @@ jobs:
         python -m flake8
         cd api_yamdb/
         pip install -r requirements.txt
+  
+    - name: Test with flake8 and django tests
+      run: |
+        echo ls 
         python manage.py test
-
-    # - name: Test with flake8 and django tests
-    #   run: |
-    #     cd ~
-    #     cd api_yamdb/
-    #     python manage.py test
     
     - name: Test with pytest
       run: pytest

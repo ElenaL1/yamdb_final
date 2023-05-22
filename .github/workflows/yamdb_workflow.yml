@@ -17,11 +17,10 @@ jobs:
         # flake8-isort
         python -m flake8
         cd api_yamdb/
-        pip install -r requirements.txt 
+        pip install -r requirements.txt
 
     - name: Test with flake8 and django tests
       run: |
-        cd api_yamdb/
         python manage.py test
     
     - name: Test with pytest

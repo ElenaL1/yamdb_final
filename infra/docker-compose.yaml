@@ -15,7 +15,7 @@ services:
       # # dockerfile: api_yamdb/Dockerfile
       # context: api_yamdb
       # dockerfile: Dockerfile
-    image: ${{ secrets.DOCKER_USERNAME }}/yamdb_api:v1
+    image: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:v1
     restart: always
     volumes:
       - static_value:/app/static/

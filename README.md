@@ -8,16 +8,31 @@
 ## Стек
 Python 3.9, Django, DRF, Simple-JWT, PostgreSQL, Ubuntu, Docker, nginx, gunicorn, Pandas, Github Actions, Yandex Cloud
 
+
+На сервере нужно установить docker и docker-compose. Скопировать на сервер файлы docker-compose.yaml и nginx/default.conf:
+```
+scp docker-compose.yaml <логин_на_сервере>@<IP_сервера>:/home/<логин_на_сервере>/docker-compose.yaml
+scp default.conf <логин_на_сервере>@<IP_сервера>:/home/<логин_на_сервере>/nginx/default.conf
+```
+
 ## Workflow состоит из четырёх шагов:
-    Проверка кода на соответствие PEP8
+    Проверка кода на соответствие PEP8 и pytest
     Сборка и публикация образа бекенда на DockerHub.
     Автоматический деплой на удаленный сервер.
     Отправка уведомления в телеграм-чат.
 
+Далее на сервере нужно запустить следущие команды (выполнить миграции, создать суперпользователя, собрать статитку, загрузить данные):
+```
+sudo docker-compose exec web python manage.py migrate
+sudo docker-compose exec web python manage.py createsuperuser
+sudo docker-compose exec web python manage.py collectstatic --no-input
+docker-compose exec web python manage.py loaddata fixtures.json  
+```
+
 ## Как запустить проект:
 Запускается при обновление репозитория (команда git push).
 
-Проект доступен по адресу zali3.ddns.net
+Проект доступен по [адресу](zali3.ddns.net)
 
 
 ## Примеры запросов

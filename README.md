@@ -1,4 +1,4 @@
-# yamdb_final
+# yamdb_final CI CD
 ![yamdb_final](https://github.com/ElenaL1/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
 Запуск проекта через Github Actions.
@@ -6,7 +6,13 @@
 Проект упаковывается docker compose. Автор проекта: Елена Ламберт
 
 ## Стек
-Python 3.9, Django, DRF, Simple-JWT, PostgreSQL, Ubuntu, Docker, nginx, gunicorn, Pandas, Github Actions
+Python 3.9, Django, DRF, Simple-JWT, PostgreSQL, Ubuntu, Docker, nginx, gunicorn, Pandas, Github Actions, Yandex Cloud
+
+## Workflow состоит из четырёх шагов:
+    Проверка кода на соответствие PEP8
+    Сборка и публикация образа бекенда на DockerHub.
+    Автоматический деплой на удаленный сервер.
+    Отправка уведомления в телеграм-чат.
 
 ## Как запустить проект:
 Запускается при обновление репозитория (команда git push).

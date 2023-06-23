@@ -3,7 +3,7 @@
 
 Запуск проекта через Github Actions.
 Проект является продолжением проекта API для Yamdb https://github.com/ElenaL1/api_yamdb 
-Проект упаковывается docker compose. Автор проекта: Елена Ламберт
+Проект упаковывается docker compose.
 
 ## Стек
 Python 3.9, Django, DRF, Simple-JWT, PostgreSQL, Ubuntu, Docker, nginx, gunicorn, Pandas, Github Actions, Yandex Cloud
@@ -32,7 +32,7 @@ sudo docker-compose exec web python manage.py loaddata fixtures.json
 
 Деплой сервера запускается при обновление репозитория (команда git push).
 
-Проект доступен по [адресу](http://zali3.ddns.net/api/v1/)
+Проект доступен по [адресу](http://zali3.ddns.net/api/v1/) (больше не обслуживается)
 
 
 ## Примеры запросов
@@ -71,4 +71,4 @@ sudo docker-compose exec web python manage.py loaddata fixtures.json
 }
 ```
 Более подробно информацию об эндпоинтах и примерах запросов и ответов можно посмотреть по 
-[ссылке](http://zali3.ddns.net/redoc/)
+[ссылке](http://zali3.ddns.net/redoc/) (больше не обслуживается)
